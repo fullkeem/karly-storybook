@@ -34,16 +34,31 @@ const 타이틀 = () => {
   return <p className="text-p-base text-content">[KF365] 간편한 국산 손질 오징어 1kg</p>;
 };
 
-const 할인률 = () => {
+/**
+ *
+ * @param {{
+ *   children: React.ReactNode
+ * }} props
+ * @returns
+ */
+const 할인률 = (props) => {
   return (
     <p className="text-l-lg text-accent-yellow">
-      2<span>%</span>
+      {props.children}
+      <span>%</span>
     </p>
   );
 };
 
-const 할인가격 = () => {
-  return <span className="text-gray-400 line-through text-p-sm">21,500 원</span>;
+/**
+ *
+ * @param {{
+ *   children: React.ReactNode
+ * }} props
+ * @returns
+ */
+const 할인가격 = (props) => {
+  return <span className="text-gray-400 line-through text-p-sm">{props.children} 원</span>;
 };
 
 const 컬리온리 = () => {
@@ -56,12 +71,14 @@ const 한정수량 = () => {
 
 /**
  *
- * @param {number} 원래가격
- * @param {number} 할인률
+ * @param {{
+ *   원래가격: number
+ *   할인률: number
+ * }} params
  * @returns
  */
-const get할인가격 = (원래가격, 할인률) => {
-  return 원래가격 - 원래가격 * 할인률;
+const get할인가격 = ({ 원래가격, 할인률 }) => {
+  return 원래가격 - 원래가격 * 할인률 * 0.01;
 };
 
 /**
@@ -85,10 +102,15 @@ const ProductBox = (props) => {
             {props.is샛별배송 && <샛별배송 />}
             <타이틀 />
             <div className="flex gap-2">
-              {props.할인률 && <할인률 />}
+              {props.할인률 > 0 && <할인률>{props.할인률}</할인률>}
               <가격>{props.price}</가격>
             </div>
-            <할인가격 />
+            <할인가격>
+              {get할인가격({
+                원래가격: props.price,
+                할인률: props.할인률,
+              })}
+            </할인가격>
             <p className="text-gray-400 text-p-sm">바로 요리할 수 있어 간편</p>
             <div className="flex gap-2">
               {props.isKalryOnly && <컬리온리 />}
