@@ -11,5 +11,7 @@ export const 기본표시 = {
     isKalryOnly: true,
     is한정수량: true,
     is샛별배송: true,
+    할인률: 0,
+    price: 0,
   },
 };

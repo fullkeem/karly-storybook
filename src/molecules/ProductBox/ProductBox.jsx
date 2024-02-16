@@ -1,3 +1,5 @@
+import 가격 from './가격';
+
 const ProductImg = () => {
   return (
     <div className="mb-4 h-80">
@@ -32,7 +34,7 @@ const 타이틀 = () => {
   return <p className="text-p-base text-content">[KF365] 간편한 국산 손질 오징어 1kg</p>;
 };
 
-const 할인율 = () => {
+const 할인률 = () => {
   return (
     <p className="text-l-lg text-accent-yellow">
       2<span>%</span>
@@ -40,13 +42,8 @@ const 할인율 = () => {
   );
 };
 
-const 할인된_가격 = () => {
-  return (
-    <p className="text-l-lg text-content">
-      21,070
-      <span>원</span>
-    </p>
-  );
+const 할인가격 = () => {
+  return <span className="text-gray-400 line-through text-p-sm">21,500 원</span>;
 };
 
 const 컬리온리 = () => {
@@ -59,10 +56,22 @@ const 한정수량 = () => {
 
 /**
  *
+ * @param {number} 원래가격
+ * @param {number} 할인률
+ * @returns
+ */
+const get할인가격 = (원래가격, 할인률) => {
+  return 원래가격 - 원래가격 * 할인률;
+};
+
+/**
+ *
  * @param {{
- *   isKalryOnly: boolean
- *   is한정수량: boolean
- *   is샛별배송: boolean
+ *  isKalryOnly: boolean
+ *  is한정수량: boolean
+ *  is샛별배송: boolean
+ *  할인률: number
+ *  price: number
  * }} props
  * @returns
  */
@@ -76,10 +85,10 @@ const ProductBox = (props) => {
             {props.is샛별배송 && <샛별배송 />}
             <타이틀 />
             <div className="flex gap-2">
-              <할인율 />
-              <할인된_가격 />
+              {props.할인률 && <할인률 />}
+              <가격>{props.price}</가격>
             </div>
-            <span className="text-gray-400 line-through text-p-sm">21,500 원</span>
+            <할인가격 />
             <p className="text-gray-400 text-p-sm">바로 요리할 수 있어 간편</p>
             <div className="flex gap-2">
               {props.isKalryOnly && <컬리온리 />}

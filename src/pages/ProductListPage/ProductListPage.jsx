@@ -5,12 +5,12 @@ import Header from '@/organisms/Header/Header';
 
 const ProductListPage = () => {
   return (
-    <div>
+    <>
       <Header />
       <Contents />
       <Dialog />
       <Footer />
-    </div>
+    </>
   );
 };
 

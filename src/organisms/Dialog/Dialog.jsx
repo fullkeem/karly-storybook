@@ -9,7 +9,7 @@ const Dialog = () => {
             </p>
             <span
               className="mt-4 text-l-base leading-[30px]"
-              data-discountprice={25000}
+              data-discountprice="25000"
               id="discountPrice"
               data-img="https://chapsheep.pockethost.io/api/files/qo3tzvf8q99iywt/1r8hagdshf2m48s/product_thumb7_kavgysC08B.jpg"
             >
@@ -18,14 +18,14 @@ const Dialog = () => {
           </div>
           <div className="row-start-1 flex h-[30px] w-[90px] self-end justify-self-end border border-gray-200">
             <button type="button" className="button__minus w-[30px] overflow-hidden">
-              <svg role="img" width={46} height={84} viewBox="8 46 46 84">
-                <use href="/icons/_sprite.svg#minus" />
+              <svg role="img" width="46" height="84" viewBox="8 46 46 84">
+                <use href="/icons/_sprite.svg#minus"></use>
               </svg>
             </button>
             <span className="product__amount inline-block w-[30px] text-center align-top leading-[30px]">1</span>
             <button type="button" className="button__plus w-[30px] overflow-hidden">
-              <svg role="img" width={46} height={84} viewBox="8 8 46 84">
-                <use href="/icons/_sprite.svg#plus" />
+              <svg role="img" width="46" height="84" viewBox="8 8 46 84">
+                <use href="/icons/_sprite.svg#plus"></use>
               </svg>
             </button>
           </div>

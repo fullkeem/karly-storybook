@@ -20,7 +20,11 @@
     "@storybook/addon-essentials": "^7.6.16",
     "@storybook/addon-interactions": "^7.6.16",
     "@storybook/addon-links": "^7.6.16",
+<<<<<<< HEAD
     "@storybook/addon-onboarding": "1.0.11",
+=======
+    "@storybook/addon-onboarding": "^1.0.11",
+>>>>>>> fdd23362a2bbbd38f4471ed943e5b89454b3d78c
     "@storybook/blocks": "^7.6.16",
     "@storybook/react": "^7.6.16",
     "@storybook/react-vite": "^7.6.16",
@@ -38,7 +42,11 @@
     "json-server": "1.0.0-alpha.23",
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
+<<<<<<< HEAD
     "prop-types": "15.8.1",
+=======
+    "prop-types": "^15.8.1",
+>>>>>>> fdd23362a2bbbd38f4471ed943e5b89454b3d78c
     "storybook": "^7.6.16",
     "tailwindcss": "^3.4.1",
     "vite": "^5.1.0",
