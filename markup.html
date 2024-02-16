@@ -4,257 +4,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>마켓 베스트 - 칼리</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        content: ['./index.html', './src/**/**/*.{html,js,ts,jsx,tsx}'],
-        theme: {
-          extend: {
-            colors: {
-              black: '#000000',
-              secondary: '#bd76ff',
-              white: '#ffffff',
-              primary: '#5f0080',
-              content: '#333333',
-              gray: {
-                50: '#f9f9f9',
-                100: '#e1e1e1',
-                200: '#c4c4c4',
-                300: '#a6a6a6',
-                400: '#898989',
-                500: '#6b6b6b',
-                600: '#565656',
-                700: '#404040',
-                800: '#2b2b2b',
-                900: '#151515',
-                divider: '#d9d9d9',
-              },
-              accent: {
-                yellow: '#fa622f',
-              },
-              blue: {
-                100: '#cce0ff',
-                200: '#99c2ff',
-                300: '#66a3ff',
-                400: '#3385ff',
-                500: '#0066ff',
-                600: '#0052cc',
-                700: '#003d99',
-                800: '#002966',
-                900: '#001433',
-              },
-              Info: {
-                Error: '#f03f40',
-              },
-            },
-            fontSize: {
-              sm: '12px',
-              base: '16px',
-              lg: '21.3px',
-              xl: '28.4px',
-              '2xl': '37.9px',
-              '3xl': '50.5px',
-              // Heading
-              'h-base': [
-                '16px',
-                {
-                  lineHeight: '140%',
-                  fontWeight: '700',
-                },
-              ],
-              'h-lg': [
-                '21.3px',
-                {
-                  lineHeight: '140%',
-                  fontWeight: '700',
-                },
-              ],
-              'h-xl': [
-                '28.4px',
-                {
-                  lineHeight: '140%',
-                  fontWeight: '700',
-                },
-              ],
-              'h-2xl': [
-                '37.9px',
-                {
-                  lineHeight: '140%',
-                  fontWeight: '700',
-                },
-              ],
-              'h-3xl': [
-                '50.5px',
-                {
-                  lineHeight: '140%',
-                  fontWeight: '700',
-                },
-              ],
-              // Label
-              'l-sm': [
-                '12px',
-                {
-                  lineHeight: '150%',
-                  fontWeight: '600',
-                },
-              ],
-              'l-base': [
-                '16px',
-                {
-                  lineHeight: '150%',
-                  fontWeight: '600',
-                },
-              ],
-              'l-lg': [
-                '21.3px',
-                {
-                  lineHeight: '150%',
-                  fontWeight: '600',
-                },
-              ],
-              'l-xl': [
-                '28.4px',
-                {
-                  lineHeight: '150%',
-                  fontWeight: '600',
-                },
-              ],
-              'l-2xl': [
-                '37.9px',
-                {
-                  lineHeight: '150%',
-                  fontWeight: '600',
-                },
-              ],
-              // Paragraph
-              'p-xsm': [
-                '10px',
-                {
-                  lineHeight: '160%',
-                  fontWeight: '400',
-                },
-              ],
-              'p-sm': [
-                '12px',
-                {
-                  lineHeight: '160%',
-                  fontWeight: '400',
-                },
-              ],
-              'p-wsm': [
-                '12px',
-                {
-                  lineHeight: '150%',
-                  fontWeight: '400',
-                },
-              ],
-              'p-base': [
-                '16px',
-                {
-                  lineHeight: '160%',
-                  fontWeight: '400',
-                },
-              ],
-              'p-lg': [
-                '21.3px',
-                {
-                  lineHeight: '160%',
-                  fontWeight: '400',
-                },
-              ],
-              'p-xl': [
-                '28.4px',
-                {
-                  lineHeight: '160%',
-                  fontWeight: '400',
-                },
-              ],
-            },
-            fontFamily: {
-              sans: 'Pretendard-Regular',
-            },
-            width: {
-              innerWrapper: '1050px',
-              'productBox-width': '249px',
-              100: '400px',
-              61.75: '247px',
-              48.5: '194px',
-              7.5: '30px',
-              75: '300px',
-              78.75: '315px',
-              85: '340px',
-              140: '560px',
-              262.5: '1050px',
-            },
-            height: {
-              'productBox-height': '538px',
-              3.25: '13px',
-              7.5: '30px',
-              13: '52px',
-              13.5: '54px',
-              18: '72px',
-              167.5: '670px',
-            },
-            inset: {
-              'productBox-cart-top': '258px',
-              'productBox-cart-left': '189px',
-              18: '72px',
-            },
-            spacing: {
-              3.25: '13px',
-              5.25: '21px',
-              7.25: '29px',
-              13.5: '54px',
-            },
-            backgroundImage: {
-              input__button: "url('/src/assets/svg/input-button.svg')",
-            },
-            backgroundPosition: {
-              'radio--no': 'left top',
-              'radio--yes': 'left bottom',
-              'check--no': 'right top',
-              'check--yes': 'right bottom',
-            },
-          },
-          animation: {
-            'bubble-fadeIn': 'fadeIn 3s',
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': {
-                opacity: 0,
-              },
-              '30%': {
-                opacity: 1,
-              },
-              '80%': {
-                opacity: 1,
-              },
-              '100%': {
-                opacity: 0,
-              },
-            },
-          },
-        },
-      };
-    </script>
   </head>
   <body>
     <header class="mx-auto my-0 w-innerWrapper">
       <h1 class="sr-only">마켓칼리</h1>
-      <div class="header__div-top flex h-13 items-center justify-end">
+      <div class="flex items-center justify-end header__div-top h-13">
         <a href="#" class="px-3 text-p-sm text-primary">회원가입</a>
         <div class="h-3.25 w-px border-r text-gray-divider"></div>
         <a href="#" class="px-3 text-p-sm text-content">로그인</a>
         <div class="h-3.25 w-px border-r text-gray-divider"></div>
-        <div class="group relative flex h-full cursor-pointer items-center gap-1 px-3 text-p-sm text-content">
+        <div class="relative flex items-center h-full gap-1 px-3 cursor-pointer group text-p-sm text-content">
           <span>고객센터</span>
           <svg role="img" width="8" height="5.6" viewBox="0 0 11 7">
             <use href="/icons/_sprite.svg#down"></use>
           </svg>
           <div
-            class="group invisible absolute right-3 top-10 w-32 border border-gray-divider bg-white p-2 group-hover:visible z-10"
+            class="absolute z-10 invisible w-32 p-2 bg-white border group right-3 top-10 border-gray-divider group-hover:visible"
           >
-            <ul class="flex list-none flex-col gap-1">
+            <ul class="flex flex-col gap-1 list-none">
               <li>
                 <a href="#">공지사항</a>
               </li>
@@ -281,14 +48,14 @@
           </a>
           <a href="#" class="text-l-lg text-primary">마켓칼리</a>
           <div class="h-3.5 border-r text-gray-divider"></div>
-          <a href="#" class="text-l-lg text-gray-400">뷰티칼리</a>
+          <a href="#" class="text-gray-400 text-l-lg">뷰티칼리</a>
         </div>
         <div class="relative">
           <form>
             <input
               type="text"
               name="keyword"
-              class="w-100 rounded border border-primary px-5 py-3 text-p-lg text-gray-400 focus:outline-primary"
+              class="px-5 py-3 text-gray-400 border rounded w-100 border-primary text-p-lg focus:outline-primary"
               placeholder="검색어를 입력해주세요"
             />
             <button type="submit">
@@ -309,7 +76,7 @@
               <use href="/icons/_sprite.svg#icons"></use>
             </svg>
           </button>
-          <a href="#" class="header__a-cart-origin relative">
+          <a href="#" class="relative header__a-cart-origin">
             <svg role="img" width="36" height="36" viewBox="112 0 36 36">
               <use href="/icons/_sprite.svg#icons"></use>
             </svg>
@@ -326,15 +93,15 @@
             <figure class="flex gap-5">
               <img src="" alt="" class="header__bubble-img h-[60px] w-[46px]" />
               <div>
-                <figcaption class="header__bubble-figcaption mb-2 text-l-sm text-gray-300"></figcaption>
+                <figcaption class="mb-2 text-gray-300 header__bubble-figcaption text-l-sm"></figcaption>
                 <p class="header__bubble-p text-p-sm text-content">장바구니에 상품을 담았습니다.</p>
               </div>
             </figure>
           </div>
         </div>
       </div>
-      <nav class="flex h-18 items-center justify-between">
-        <div class="group relative flex h-18 items-center gap-3">
+      <nav class="flex items-center justify-between h-18">
+        <div class="relative flex items-center gap-3 group h-18">
           <svg role="img" width="16" height="14" viewBox="0 0 16 14">
             <use href="/icons/_sprite.svg#hamburger-black"></use>
           </svg>
@@ -536,17 +303,17 @@
             <a href="#">특가/혜택</a>
           </li>
         </ul>
-        <a class="rounded-3xl border border-gray-300 px-2 py-1" href="#">
+        <a class="px-2 py-1 border border-gray-300 rounded-3xl" href="#">
           <span class="text-p-sm text-primary">샛별·낮</span>
-          <span class="text-p-sm text-gray-500">배송안내</span>
+          <span class="text-gray-500 text-p-sm">배송안내</span>
         </a>
       </nav>
       <div
-        class="header__div-simple fixed left-0 right-0 top-0 z-20 hidden bg-white shadow-Below/Low"
+        class="fixed top-0 left-0 right-0 z-20 hidden bg-white header__div-simple shadow-Below/Low"
         style="display: none"
       >
-        <nav class="mx-auto my-0 flex h-18 w-innerWrapper items-center justify-between gap-2">
-          <div class="group relative flex h-18 items-center gap-3">
+        <nav class="flex items-center justify-between gap-2 mx-auto my-0 h-18 w-innerWrapper">
+          <div class="relative flex items-center gap-3 group h-18">
             <svg role="img" width="16" height="14" viewBox="0 0 16 14">
               <use href="/icons/_sprite.svg#hamburger-black"></use>
             </svg>
@@ -755,7 +522,7 @@
               placeholder="검색어를 입력해주세요"
             />
             <button type="button">
-              <svg class="absolute right-5 top-0" role="img" width="36" height="36" viewBox="0 0 36 36">
+              <svg class="absolute top-0 right-5" role="img" width="36" height="36" viewBox="0 0 36 36">
                 <use href="/icons/_sprite.svg#search"></use>
               </svg>
             </button>
@@ -771,7 +538,7 @@
                 <use href="/icons/_sprite.svg#icons"></use>
               </svg>
             </button>
-            <a href="#" class="header__a-cart-simple relative">
+            <a href="#" class="relative header__a-cart-simple">
               <svg role="img" width="36" height="36" viewBox="112 0 36 36">
                 <use href="/icons/_sprite.svg#icons"></use>
               </svg>
@@ -788,7 +555,7 @@
               <figure class="flex gap-5">
                 <img src="" alt="" class="header__bubble-img h-[60px] w-[46px]" />
                 <div>
-                  <figcaption class="header__bubble-figcaption mb-2 text-l-sm text-gray-300"></figcaption>
+                  <figcaption class="mb-2 text-gray-300 header__bubble-figcaption text-l-sm"></figcaption>
                   <p class="header__bubble-p text-p-sm text-content">장바구니에 상품을 담았습니다.</p>
                 </div>
               </figure>
@@ -814,7 +581,7 @@
       >
         <use href="/icons/_sprite.svg#arrows"></use>
       </svg>
-      <p class="text-l-sm text-black">최근 본 상품</p>
+      <p class="text-black text-l-sm">최근 본 상품</p>
       <div class="swiper swiper__sidebar h-[129px] w-10 swiper-initialized swiper-vertical swiper-backface-hidden">
         <div
           class="swiper-wrapper"
@@ -867,17 +634,17 @@
     </div>
 
     <div class="pb-20">
-      <h2 class="py-12 text-center text-l-lg text-black">베스트</h2>
-      <div class="mx-auto my-0 flex w-innerWrapper justify-between">
+      <h2 class="py-12 text-center text-black text-l-lg">베스트</h2>
+      <div class="flex justify-between mx-auto my-0 w-innerWrapper">
         <form>
           <div class="list__div-filter no-scrollbar w-[220px] overflow-y-scroll py-3.5">
-            <details class="group border-b border-gray-100">
+            <details class="border-b border-gray-100 group">
               <summary class="flex list-none items-center justify-between py-3.5 text-l-base text-content">
                 <span>필터</span>
                 <button class="list__button-reset text-[10px] font-light text-gray-300" type="reset">초기화</button>
               </summary>
             </details>
-            <details class="group border-b border-gray-100" open>
+            <details class="border-b border-gray-100 group" open>
               <summary
                 class="flex cursor-pointer list-none items-center justify-between py-3.5 text-l-base text-content"
               >
@@ -889,24 +656,24 @@
                 </span>
               </summary>
               <ul class="list__ul-filter-category pl-1 text-[14px]">
-                <li class="flex items-center pb-4 pt-2">
-                  <input type="checkbox" id="면" name="면" value="면" class="peer appearance-none" />
-                  <label for="면" class="h-6 w-6 bg-input__button bg-check--no peer-checked:bg-check--yes mr-2"></label>
+                <li class="flex items-center pt-2 pb-4">
+                  <input type="checkbox" id="면" name="면" value="면" class="appearance-none peer" />
+                  <label for="면" class="w-6 h-6 mr-2 bg-input__button bg-check--no peer-checked:bg-check--yes"></label>
                   <label for="면">면</label>
-                  <span class="pl-2 text-p-sm text-gray-300 align-middle">4</span>
+                  <span class="pl-2 text-gray-300 align-middle text-p-sm">4</span>
                 </li>
-                <li class="flex items-center pb-4 pt-2">
-                  <input type="checkbox" id="채소" name="채소" value="채소" class="peer appearance-none" />
+                <li class="flex items-center pt-2 pb-4">
+                  <input type="checkbox" id="채소" name="채소" value="채소" class="appearance-none peer" />
                   <label
                     for="채소"
-                    class="h-6 w-6 bg-input__button bg-check--no peer-checked:bg-check--yes mr-2"
+                    class="w-6 h-6 mr-2 bg-input__button bg-check--no peer-checked:bg-check--yes"
                   ></label>
                   <label for="채소">채소</label>
-                  <span class="pl-2 text-p-sm text-gray-300 align-middle">4</span>
+                  <span class="pl-2 text-gray-300 align-middle text-p-sm">4</span>
                 </li>
               </ul>
             </details>
-            <details class="group border-b border-gray-100" open>
+            <details class="border-b border-gray-100 group" open>
               <summary
                 class="flex cursor-pointer list-none items-center justify-between py-3.5 text-l-base text-content"
               >
@@ -918,28 +685,28 @@
                 </span>
               </summary>
               <ul class="list__ul-filter-brand pl-1 text-[14px]">
-                <li class="flex items-center pb-4 pt-2">
-                  <input type="checkbox" id="풀무원" name="풀무원" value="풀무원" class="peer appearance-none" />
+                <li class="flex items-center pt-2 pb-4">
+                  <input type="checkbox" id="풀무원" name="풀무원" value="풀무원" class="appearance-none peer" />
                   <label
                     for="풀무원"
-                    class="h-6 w-6 bg-input__button bg-check--no peer-checked:bg-check--yes mr-2"
+                    class="w-6 h-6 mr-2 bg-input__button bg-check--no peer-checked:bg-check--yes"
                   ></label>
                   <label for="풀무원">풀무원</label>
-                  <span class="pl-2 text-p-sm text-gray-300 align-middle">3</span>
+                  <span class="pl-2 text-gray-300 align-middle text-p-sm">3</span>
                 </li>
 
-                <li class="flex items-center pb-4 pt-2">
-                  <input type="checkbox" id="투다리" name="투다리" value="투다리" class="peer appearance-none" />
+                <li class="flex items-center pt-2 pb-4">
+                  <input type="checkbox" id="투다리" name="투다리" value="투다리" class="appearance-none peer" />
                   <label
                     for="투다리"
-                    class="h-6 w-6 bg-input__button bg-check--no peer-checked:bg-check--yes mr-2"
+                    class="w-6 h-6 mr-2 bg-input__button bg-check--no peer-checked:bg-check--yes"
                   ></label>
                   <label for="투다리">투다리</label>
-                  <span class="pl-2 text-p-sm text-gray-300 align-middle">1</span>
+                  <span class="pl-2 text-gray-300 align-middle text-p-sm">1</span>
                 </li>
               </ul>
             </details>
-            <details class="group border-b border-gray-100" open>
+            <details class="border-b border-gray-100 group" open>
               <summary
                 class="flex cursor-pointer list-none items-center justify-between py-3.5 text-l-base text-content"
               >
@@ -951,41 +718,41 @@
                 </span>
               </summary>
               <ul class="pl-1 text-[14px]">
-                <li class="flex items-center pb-4 pt-2">
-                  <input type="radio" id="price1" name="price" class="peer appearance-none" />
+                <li class="flex items-center pt-2 pb-4">
+                  <input type="radio" id="price1" name="price" class="appearance-none peer" />
                   <label
                     for="price1"
-                    class="h-6 w-6 bg-input__button bg-radio--no peer-checked:bg-radio--yes mr-2"
+                    class="w-6 h-6 mr-2 bg-input__button bg-radio--no peer-checked:bg-radio--yes"
                   ></label>
                   <label for="price1">5,000원 미만</label>
                 </li>
-                <li class="flex items-center pb-4 pt-2">
-                  <input type="radio" id="price2" name="price" class="peer appearance-none" />
+                <li class="flex items-center pt-2 pb-4">
+                  <input type="radio" id="price2" name="price" class="appearance-none peer" />
                   <label
                     for="price2"
-                    class="h-6 w-6 bg-input__button bg-radio--no peer-checked:bg-radio--yes mr-2"
+                    class="w-6 h-6 mr-2 bg-input__button bg-radio--no peer-checked:bg-radio--yes"
                   ></label>
                   <label for="price2">5,000원 ~ 10,000원</label>
                 </li>
-                <li class="flex items-center pb-4 pt-2">
-                  <input type="radio" id="price3" name="price" class="peer appearance-none" />
+                <li class="flex items-center pt-2 pb-4">
+                  <input type="radio" id="price3" name="price" class="appearance-none peer" />
                   <label
                     for="price3"
-                    class="h-6 w-6 bg-input__button bg-radio--no peer-checked:bg-radio--yes mr-2"
+                    class="w-6 h-6 mr-2 bg-input__button bg-radio--no peer-checked:bg-radio--yes"
                   ></label>
                   <label for="price3">10,001원 ~ 15,000원</label>
                 </li>
-                <li class="flex items-center pb-4 pt-2">
-                  <input type="radio" id="price4" name="price" class="peer appearance-none" />
+                <li class="flex items-center pt-2 pb-4">
+                  <input type="radio" id="price4" name="price" class="appearance-none peer" />
                   <label
                     for="price4"
-                    class="h-6 w-6 bg-input__button bg-radio--no peer-checked:bg-radio--yes mr-2"
+                    class="w-6 h-6 mr-2 bg-input__button bg-radio--no peer-checked:bg-radio--yes"
                   ></label>
                   <label for="price4">15,000원 이상</label>
                 </li>
               </ul>
             </details>
-            <details class="group border-b border-gray-100" open>
+            <details class="border-b border-gray-100 group" open>
               <summary
                 class="flex cursor-pointer list-none items-center justify-between py-3.5 text-l-base text-content"
               >
@@ -997,17 +764,17 @@
                 </span>
               </summary>
               <ul class="pl-1 text-[14px]">
-                <li class="flex items-center pb-4 pt-2">
-                  <input type="checkbox" id="discount" name="discount" class="peer appearance-none" />
+                <li class="flex items-center pt-2 pb-4">
+                  <input type="checkbox" id="discount" name="discount" class="appearance-none peer" />
                   <label
                     for="discount"
-                    class="h-6 w-6 bg-input__button bg-check--no peer-checked:bg-check--yes mr-2"
+                    class="w-6 h-6 mr-2 bg-input__button bg-check--no peer-checked:bg-check--yes"
                   ></label>
                   <label for="discount">할인 상품</label>
                 </li>
               </ul>
             </details>
-            <details class="group border-b border-gray-100" open>
+            <details class="border-b border-gray-100 group" open>
               <summary
                 class="flex cursor-pointer list-none items-center justify-between py-3.5 text-l-base text-content"
               >
@@ -1019,25 +786,25 @@
                 </span>
               </summary>
               <ul class="pl-1 text-[14px]">
-                <li class="flex items-center pb-4 pt-2">
-                  <input type="checkbox" id="karlyOnly" name="karlyOnly" class="peer appearance-none" />
+                <li class="flex items-center pt-2 pb-4">
+                  <input type="checkbox" id="karlyOnly" name="karlyOnly" class="appearance-none peer" />
                   <label
                     for="karlyOnly"
-                    class="h-6 w-6 bg-input__button bg-check--no peer-checked:bg-check--yes mr-2"
+                    class="w-6 h-6 mr-2 bg-input__button bg-check--no peer-checked:bg-check--yes"
                   ></label>
                   <label for="karlyOnly">Karly Only</label>
                 </li>
-                <li class="flex items-center pb-4 pt-2">
-                  <input type="checkbox" id="limited" name="limited" class="peer appearance-none" />
+                <li class="flex items-center pt-2 pb-4">
+                  <input type="checkbox" id="limited" name="limited" class="appearance-none peer" />
                   <label
                     for="limited"
-                    class="h-6 w-6 bg-input__button bg-check--no peer-checked:bg-check--yes mr-2"
+                    class="w-6 h-6 mr-2 bg-input__button bg-check--no peer-checked:bg-check--yes"
                   ></label>
                   <label for="limited">한정수량</label>
                 </li>
               </ul>
             </details>
-            <details class="group border-b border-gray-100" open>
+            <details class="border-b border-gray-100 group" open>
               <summary
                 class="flex cursor-pointer list-none items-center justify-between py-3.5 text-l-base text-content"
               >
@@ -1049,11 +816,11 @@
                 </span>
               </summary>
               <ul class="pl-1 text-[14px]">
-                <li class="flex items-center pb-4 pt-2">
-                  <input type="checkbox" id="pet" name="pet" class="peer appearance-none" value="반려동물" />
+                <li class="flex items-center pt-2 pb-4">
+                  <input type="checkbox" id="pet" name="pet" class="appearance-none peer" value="반려동물" />
                   <label
                     for="pet"
-                    class="h-6 w-6 bg-input__button bg-check--no peer-checked:bg-check--yes mr-2"
+                    class="w-6 h-6 mr-2 bg-input__button bg-check--no peer-checked:bg-check--yes"
                   ></label>
                   <label for="pet">반려동물 상품</label>
                 </li>
@@ -1068,36 +835,36 @@
               <span class="list__span-total">18</span>
               건
             </div>
-            <div class="list__div-sort col-span-2 text-l-base">
+            <div class="col-span-2 list__div-sort text-l-base">
               <form>
                 <section class="flex items-center justify-end text-gray-300">
                   <span>
-                    <input name="sort" id="type1" type="radio" class="peer appearance-none" checked />
+                    <input name="sort" id="type1" type="radio" class="appearance-none peer" checked />
                     <label for="type1" class="peer-checked:text-content">추천순</label>
                   </span>
                   <div class="mx-2 h-2.5 w-0 border border-gray-300"></div>
                   <span>
-                    <input name="sort" id="type2" type="radio" class="peer appearance-none" />
+                    <input name="sort" id="type2" type="radio" class="appearance-none peer" />
                     <label for="type2" class="peer-checked:text-content">신상품순</label>
                   </span>
                   <div class="mx-2 h-2.5 w-0 border border-gray-300"></div>
                   <span>
-                    <input name="sort" id="type3" type="radio" class="peer appearance-none" />
+                    <input name="sort" id="type3" type="radio" class="appearance-none peer" />
                     <label for="type3" class="peer-checked:text-content">판매량순</label>
                   </span>
                   <div class="mx-2 h-2.5 w-0 border border-gray-300"></div>
                   <span>
-                    <input name="sort" id="type4" type="radio" class="peer appearance-none" />
+                    <input name="sort" id="type4" type="radio" class="appearance-none peer" />
                     <label for="type4" class="peer-checked:text-content">혜택순</label>
                   </span>
                   <div class="mx-2 h-2.5 w-0 border border-gray-300"></div>
                   <span>
-                    <input name="sort" id="type5" type="radio" class="peer appearance-none" />
+                    <input name="sort" id="type5" type="radio" class="appearance-none peer" />
                     <label for="type5" class="peer-checked:text-content">낮은 가격순</label>
                   </span>
                   <div class="mx-2 h-2.5 w-0 border border-gray-300"></div>
                   <span>
-                    <input name="sort" id="type6" type="radio" class="peer appearance-none" />
+                    <input name="sort" id="type6" type="radio" class="appearance-none peer" />
                     <label for="type6" class="peer-checked:text-content">높은 가격순</label>
                   </span>
                 </section>
@@ -1110,12 +877,12 @@
                   <div class="mb-4 h-80">
                     <img
                       src="https://chapsheep.pockethost.io/api/files/qo3tzvf8q99iywt/1r8hagdshf2m48s/product_thumb7_kavgysC08B.jpg"
-                      class="h-full w-full object-cover"
+                      class="object-cover w-full h-full"
                       alt="블렌드 원두 4종"
                     />
                   </div>
-                  <div class="info flex flex-col gap-2">
-                    <span class="text-l-sm text-gray-400">샛별배송</span>
+                  <div class="flex flex-col gap-2 info">
+                    <span class="text-gray-400 text-l-sm">샛별배송</span>
                     <p class="text-p-base text-content">[블루보틀] 블렌드 원두 4종</p>
                     <div class="flex gap-2">
                       <p class="text-l-lg text-content">
@@ -1124,13 +891,13 @@
                       </p>
                     </div>
 
-                    <p class="text-p-sm text-gray-400">섬세하고 다채롭게 풀어낸 향미</p>
+                    <p class="text-gray-400 text-p-sm">섬세하고 다채롭게 풀어낸 향미</p>
                     <div class="flex gap-2"></div>
                   </div>
                   <button
                     type="button"
                     aria-label="장바구니 버튼"
-                    class="productBox__cart-button left-productBox-cart-left top-productBox-cart-top absolute"
+                    class="absolute productBox__cart-button left-productBox-cart-left top-productBox-cart-top"
                   >
                     <svg role="img" width="45" height="45" viewBox="0 0 45 45 ">
                       <use href="/icons/_sprite.svg#cart"></use>
@@ -1146,12 +913,12 @@
                   <div class="mb-4 h-80">
                     <img
                       src="https://chapsheep.pockethost.io/api/files/qo3tzvf8q99iywt/js0aa9ql3nzgbep/thumb1_TxZAyGeLuA.jpeg"
-                      class="h-full w-full object-cover"
+                      class="object-cover w-full h-full"
                       alt="항정살 구이용"
                     />
                   </div>
-                  <div class="info flex flex-col gap-2">
-                    <span class="text-l-sm text-gray-400">샛별배송</span>
+                  <div class="flex flex-col gap-2 info">
+                    <span class="text-gray-400 text-l-sm">샛별배송</span>
                     <p class="text-p-base text-content">[도드람한돈] 항정살 구이용 500g (냉장)</p>
                     <div class="flex gap-2">
                       <p class="text-l-lg text-accent-yellow">
@@ -1163,16 +930,16 @@
                         <span>원</span>
                       </p>
                     </div>
-                    <span class="text-p-sm text-gray-400 line-through">28,500 원</span>
-                    <p class="text-p-sm text-gray-400">100g당 판매가: 5,700원</p>
+                    <span class="text-gray-400 line-through text-p-sm">28,500 원</span>
+                    <p class="text-gray-400 text-p-sm">100g당 판매가: 5,700원</p>
                     <div class="flex gap-2">
-                      <span class="rounded bg-gray-100 p-1 text-l-sm text-primary">Karly Only</span>
+                      <span class="p-1 bg-gray-100 rounded text-l-sm text-primary">Karly Only</span>
                     </div>
                   </div>
                   <button
                     type="button"
                     aria-label="장바구니 버튼"
-                    class="productBox__cart-button left-productBox-cart-left top-productBox-cart-top absolute"
+                    class="absolute productBox__cart-button left-productBox-cart-left top-productBox-cart-top"
                   >
                     <svg role="img" width="45" height="45" viewBox="0 0 45 45 ">
                       <use href="/icons/_sprite.svg#cart"></use>
@@ -1188,12 +955,12 @@
                   <div class="mb-4 h-80">
                     <img
                       src="https://chapsheep.pockethost.io/api/files/qo3tzvf8q99iywt/tmpp1i69yyi21zq/thumb1_tyTCvTrIZk.jpg"
-                      class="h-full w-full object-cover"
+                      class="object-cover w-full h-full"
                       alt="대패 삼겹살"
                     />
                   </div>
-                  <div class="info flex flex-col gap-2">
-                    <span class="text-l-sm text-gray-400">샛별배송</span>
+                  <div class="flex flex-col gap-2 info">
+                    <span class="text-gray-400 text-l-sm">샛별배송</span>
                     <p class="text-p-base text-content">[도드람한돈] 대패 삼겹살 300g (냉동)</p>
                     <div class="flex gap-2">
                       <p class="text-l-lg text-accent-yellow">
@@ -1205,14 +972,14 @@
                         <span>원</span>
                       </p>
                     </div>
-                    <span class="text-p-sm text-gray-400 line-through">8,990 원</span>
-                    <p class="text-p-sm text-gray-400">100g당 판매가: 2,997원</p>
+                    <span class="text-gray-400 line-through text-p-sm">8,990 원</span>
+                    <p class="text-gray-400 text-p-sm">100g당 판매가: 2,997원</p>
                     <div class="flex gap-2"></div>
                   </div>
                   <button
                     type="button"
                     aria-label="장바구니 버튼"
-                    class="productBox__cart-button left-productBox-cart-left top-productBox-cart-top absolute"
+                    class="absolute productBox__cart-button left-productBox-cart-left top-productBox-cart-top"
                   >
                     <svg role="img" width="45" height="45" viewBox="0 0 45 45 ">
                       <use href="/icons/_sprite.svg#cart"></use>
@@ -1228,12 +995,12 @@
                   <div class="mb-4 h-80">
                     <img
                       src="https://chapsheep.pockethost.io/api/files/qo3tzvf8q99iywt/tpwo5fbl3kse9ss/thumb1_CYmlaTJ49L.jpg"
-                      class="h-full w-full object-cover"
+                      class="object-cover w-full h-full"
                       alt="오징어"
                     />
                   </div>
-                  <div class="info flex flex-col gap-2">
-                    <span class="text-l-sm text-gray-400">샛별배송</span>
+                  <div class="flex flex-col gap-2 info">
+                    <span class="text-gray-400 text-l-sm">샛별배송</span>
                     <p class="text-p-base text-content">[KF365] 간편한 국산 손질 오징어 1kg</p>
                     <div class="flex gap-2">
                       <p class="text-l-lg text-accent-yellow">
@@ -1245,17 +1012,17 @@
                         <span>원</span>
                       </p>
                     </div>
-                    <span class="text-p-sm text-gray-400 line-through">21,500 원</span>
-                    <p class="text-p-sm text-gray-400">바로 요리할 수 있어 간편</p>
+                    <span class="text-gray-400 line-through text-p-sm">21,500 원</span>
+                    <p class="text-gray-400 text-p-sm">바로 요리할 수 있어 간편</p>
                     <div class="flex gap-2">
-                      <span class="rounded bg-gray-100 p-1 text-l-sm text-primary">Karly Only</span>
-                      <span class="rounded bg-gray-100 p-1 text-l-sm text-content">한정수량</span>
+                      <span class="p-1 bg-gray-100 rounded text-l-sm text-primary">Karly Only</span>
+                      <span class="p-1 bg-gray-100 rounded text-l-sm text-content">한정수량</span>
                     </div>
                   </div>
                   <button
                     type="button"
                     aria-label="장바구니 버튼"
-                    class="productBox__cart-button left-productBox-cart-left top-productBox-cart-top absolute"
+                    class="absolute productBox__cart-button left-productBox-cart-left top-productBox-cart-top"
                   >
                     <svg role="img" width="45" height="45" viewBox="0 0 45 45 ">
                       <use href="/icons/_sprite.svg#cart"></use>
@@ -1271,12 +1038,12 @@
                   <div class="mb-4 h-80">
                     <img
                       src="https://chapsheep.pockethost.io/api/files/qo3tzvf8q99iywt/g32xoy95y83ty79/thumb1_L5IJ0loSNy.jpg"
-                      class="h-full w-full object-cover"
+                      class="object-cover w-full h-full"
                       alt="갈치"
                     />
                   </div>
-                  <div class="info flex flex-col gap-2">
-                    <span class="text-l-sm text-gray-400">샛별배송</span>
+                  <div class="flex flex-col gap-2 info">
+                    <span class="text-gray-400 text-l-sm">샛별배송</span>
                     <p class="text-p-base text-content">[포트럭] 제주 손질 갈치 반마리 (왕특대) 220g (생물)</p>
                     <div class="flex gap-2">
                       <p class="text-l-lg text-accent-yellow">
@@ -1288,17 +1055,17 @@
                         <span>원</span>
                       </p>
                     </div>
-                    <span class="text-p-sm text-gray-400 line-through">25,900 원</span>
-                    <p class="text-p-sm text-gray-400">두툼한 살결이 오롯이 느껴지는</p>
+                    <span class="text-gray-400 line-through text-p-sm">25,900 원</span>
+                    <p class="text-gray-400 text-p-sm">두툼한 살결이 오롯이 느껴지는</p>
                     <div class="flex gap-2">
-                      <span class="rounded bg-gray-100 p-1 text-l-sm text-primary">Karly Only</span>
-                      <span class="rounded bg-gray-100 p-1 text-l-sm text-content">한정수량</span>
+                      <span class="p-1 bg-gray-100 rounded text-l-sm text-primary">Karly Only</span>
+                      <span class="p-1 bg-gray-100 rounded text-l-sm text-content">한정수량</span>
                     </div>
                   </div>
                   <button
                     type="button"
                     aria-label="장바구니 버튼"
-                    class="productBox__cart-button left-productBox-cart-left top-productBox-cart-top absolute"
+                    class="absolute productBox__cart-button left-productBox-cart-left top-productBox-cart-top"
                   >
                     <svg role="img" width="45" height="45" viewBox="0 0 45 45 ">
                       <use href="/icons/_sprite.svg#cart"></use>
@@ -1314,12 +1081,12 @@
                   <div class="mb-4 h-80">
                     <img
                       src="https://chapsheep.pockethost.io/api/files/qo3tzvf8q99iywt/musnud903ufy07p/thumb1_SN80veqJKT.jpg"
-                      class="h-full w-full object-cover"
+                      class="object-cover w-full h-full"
                       alt="홍가리비"
                     />
                   </div>
-                  <div class="info flex flex-col gap-2">
-                    <span class="text-l-sm text-gray-400">샛별배송</span>
+                  <div class="flex flex-col gap-2 info">
+                    <span class="text-gray-400 text-l-sm">샛별배송</span>
                     <p class="text-p-base text-content">[포트럭] 국산 생물 홍가리비 700g</p>
                     <div class="flex gap-2">
                       <p class="text-l-lg text-content">
@@ -1328,13 +1095,13 @@
                       </p>
                     </div>
 
-                    <p class="text-p-sm text-gray-400">제철 맞은 화려한 자태</p>
+                    <p class="text-gray-400 text-p-sm">제철 맞은 화려한 자태</p>
                     <div class="flex gap-2"></div>
                   </div>
                   <button
                     type="button"
                     aria-label="장바구니 버튼"
-                    class="productBox__cart-button left-productBox-cart-left top-productBox-cart-top absolute"
+                    class="absolute productBox__cart-button left-productBox-cart-left top-productBox-cart-top"
                   >
                     <svg role="img" width="45" height="45" viewBox="0 0 45 45 ">
                       <use href="/icons/_sprite.svg#cart"></use>
@@ -1350,12 +1117,12 @@
                   <div class="mb-4 h-80">
                     <img
                       src="https://chapsheep.pockethost.io/api/files/qo3tzvf8q99iywt/ele9glei84aiu7c/thumb1_n9RK0Et1DI.jpeg"
-                      class="h-full w-full object-cover"
+                      class="object-cover w-full h-full"
                       alt="바나나"
                     />
                   </div>
-                  <div class="info flex flex-col gap-2">
-                    <span class="text-l-sm text-gray-400">샛별배송</span>
+                  <div class="flex flex-col gap-2 info">
+                    <span class="text-gray-400 text-l-sm">샛별배송</span>
                     <p class="text-p-base text-content">[Dole] 스위티오 바나나 1kg</p>
                     <div class="flex gap-2">
                       <p class="text-l-lg text-accent-yellow">
@@ -1367,14 +1134,14 @@
                         <span>원</span>
                       </p>
                     </div>
-                    <span class="text-p-sm text-gray-400 line-through">4,480 원</span>
-                    <p class="text-p-sm text-gray-400">고랭지 재배로 더 달고 쫀득한 (1수/1kg내외)</p>
+                    <span class="text-gray-400 line-through text-p-sm">4,480 원</span>
+                    <p class="text-gray-400 text-p-sm">고랭지 재배로 더 달고 쫀득한 (1수/1kg내외)</p>
                     <div class="flex gap-2"></div>
                   </div>
                   <button
                     type="button"
                     aria-label="장바구니 버튼"
-                    class="productBox__cart-button left-productBox-cart-left top-productBox-cart-top absolute"
+                    class="absolute productBox__cart-button left-productBox-cart-left top-productBox-cart-top"
                   >
                     <svg role="img" width="45" height="45" viewBox="0 0 45 45 ">
                       <use href="/icons/_sprite.svg#cart"></use>
@@ -1390,12 +1157,12 @@
                   <div class="mb-4 h-80">
                     <img
                       src="https://chapsheep.pockethost.io/api/files/qo3tzvf8q99iywt/om399jm5ck87r8z/thumb1_jSf7XBKemF.jpg"
-                      class="h-full w-full object-cover"
+                      class="object-cover w-full h-full"
                       alt="파인애플"
                     />
                   </div>
-                  <div class="info flex flex-col gap-2">
-                    <span class="text-l-sm text-gray-400">샛별배송</span>
+                  <div class="flex flex-col gap-2 info">
+                    <span class="text-gray-400 text-l-sm">샛별배송</span>
                     <p class="text-p-base text-content">[Dole] 스위티오 파인애플 청크 400g</p>
                     <div class="flex gap-2">
                       <p class="text-l-lg text-accent-yellow">
@@ -1407,14 +1174,14 @@
                         <span>원</span>
                       </p>
                     </div>
-                    <span class="text-p-sm text-gray-400 line-through">7,500 원</span>
-                    <p class="text-p-sm text-gray-400">손쉽게 즐기는 조각 파인애플</p>
+                    <span class="text-gray-400 line-through text-p-sm">7,500 원</span>
+                    <p class="text-gray-400 text-p-sm">손쉽게 즐기는 조각 파인애플</p>
                     <div class="flex gap-2"></div>
                   </div>
                   <button
                     type="button"
                     aria-label="장바구니 버튼"
-                    class="productBox__cart-button left-productBox-cart-left top-productBox-cart-top absolute"
+                    class="absolute productBox__cart-button left-productBox-cart-left top-productBox-cart-top"
                   >
                     <svg role="img" width="45" height="45" viewBox="0 0 45 45 ">
                       <use href="/icons/_sprite.svg#cart"></use>
@@ -1430,12 +1197,12 @@
                   <div class="mb-4 h-80">
                     <img
                       src="https://chapsheep.pockethost.io/api/files/qo3tzvf8q99iywt/ipop83di685lwjb/thumb1_FF16POVoCc.jpg"
-                      class="h-full w-full object-cover"
+                      class="object-cover w-full h-full"
                       alt="브로콜리"
                     />
                   </div>
-                  <div class="info flex flex-col gap-2">
-                    <span class="text-l-sm text-gray-400">샛별배송</span>
+                  <div class="flex flex-col gap-2 info">
+                    <span class="text-gray-400 text-l-sm">샛별배송</span>
                     <p class="text-p-base text-content">[KF365] 브로콜리 1입</p>
                     <div class="flex gap-2">
                       <p class="text-l-lg text-accent-yellow">
@@ -1447,14 +1214,14 @@
                         <span>원</span>
                       </p>
                     </div>
-                    <span class="text-p-sm text-gray-400 line-through">2,590 원</span>
-                    <p class="text-p-sm text-gray-400">믿고 먹을 수 있는 상품을 합리적인 가격에, KF365</p>
+                    <span class="text-gray-400 line-through text-p-sm">2,590 원</span>
+                    <p class="text-gray-400 text-p-sm">믿고 먹을 수 있는 상품을 합리적인 가격에, KF365</p>
                     <div class="flex gap-2"></div>
                   </div>
                   <button
                     type="button"
                     aria-label="장바구니 버튼"
-                    class="productBox__cart-button left-productBox-cart-left top-productBox-cart-top absolute"
+                    class="absolute productBox__cart-button left-productBox-cart-left top-productBox-cart-top"
                   >
                     <svg role="img" width="45" height="45" viewBox="0 0 45 45 ">
                       <use href="/icons/_sprite.svg#cart"></use>
@@ -1469,10 +1236,10 @@
             <svg role="img" width="72" height="72" viewBox="0 0 36 36" aria-label="">
               <use href="/icons/_sprite.svg#search-gray"></use>
             </svg>
-            <p class="text-p-base text-gray-600">해당 상품이 없습니다.</p>
+            <p class="text-gray-600 text-p-base">해당 상품이 없습니다.</p>
           </div>
-          <div class="flex justify-center pt-9 text-center">
-            <div class="list__div-pagination flex border-y border-l border-gray-100" style="display: flex">
+          <div class="flex justify-center text-center pt-9">
+            <div class="flex border-l border-gray-100 list__div-pagination border-y" style="display: flex">
               <button
                 class="flex h-[34px] w-[34px] items-center justify-center border-r border-gray-100 hover:bg-gray-200"
               >
@@ -1518,9 +1285,9 @@
       </div>
     </div>
     <dialog class="add-cart__popup w-[396px] rounded-2xl px-5 py-6 backdrop:backdrop-brightness-50">
-      <form action="#" class="grid auto-rows-min grid-cols-2 gap-x-2 gap-y-7">
-        <div class="col-span-2 grid">
-          <div class="product__info--template row-start-1">
+      <form action="#" class="grid grid-cols-2 auto-rows-min gap-x-2 gap-y-7">
+        <div class="grid col-span-2">
+          <div class="row-start-1 product__info--template">
             <p class="mb-3 text-l-base text-content" data-id="1r8hagdshf2m48s">[블루보틀] 블렌드 원두 4종</p>
             <span
               class="mt-4 text-l-base leading-[30px]"
@@ -1545,12 +1312,12 @@
             </button>
           </div>
         </div>
-        <div class="price__total--template col-span-2 grid gap-y-1">
+        <div class="grid col-span-2 price__total--template gap-y-1">
           <span class="mt-3.5 align-bottom text-l-base">합계</span>
           <span class="text-right text-h-xl">25,000원</span>
           <div class="col-span-2 justify-self-end">
             <span class="rounded-sm bg-accent-yellow px-2 py-[3px] text-l-sm text-white">적립</span>
-            <span class="inline-block w-32 text-right align-middle text-l-base leading-none">구매 시 13원 적립</span>
+            <span class="inline-block w-32 leading-none text-right align-middle text-l-base">구매 시 13원 적립</span>
           </div>
         </div>
         <button
@@ -1562,29 +1329,29 @@
         <button type="button" class="add-cart__button button--purple__big">장바구니 담기</button>
       </form>
     </dialog>
-    <footer class="mt-7 border border-t-gray-100">
-      <div class="mx-auto my-7 flex w-innerWrapper justify-between text-content">
+    <footer class="border mt-7 border-t-gray-100">
+      <div class="flex justify-between mx-auto my-7 w-innerWrapper text-content">
         <div>
           <h2 class="test text-h-lg">고객행복센터</h2>
           <span class="mt-4 text-h-2xl"><a href="#">1644-1107</a></span>
-          <span class="test ml-2 mt-4 inline-block align-top text-l-base">월~토요일 오전 7시 - 오후 6시</span>
+          <span class="inline-block mt-4 ml-2 align-top test text-l-base">월~토요일 오전 7시 - 오후 6시</span>
           <ul class="my-5">
             <li class="flex">
-              <button type="button" class="button--footer mr-4">카카오톡 문의</button>
+              <button type="button" class="mr-4 button--footer">카카오톡 문의</button>
               <div>
                 <p class="text-p-base">월~토요일 | 오전 7시 - 오후 6시</p>
                 <p>일/공휴일 | 오전 7시 - 오후 1시</p>
               </div>
             </li>
-            <li class="my-7 flex">
-              <button type="button" class="button--footer mr-4">1:1 문의</button>
+            <li class="flex my-7">
+              <button type="button" class="mr-4 button--footer">1:1 문의</button>
               <div>
                 <p>365일</p>
                 <p>고객센터 운영시간에 순차적으로 답변드리겠습니다.</p>
               </div>
             </li>
             <li class="flex">
-              <a href="#" target="_blank" class="button--footer mr-4 block text-center">대량주문 문의</a>
+              <a href="#" target="_blank" class="block mr-4 text-center button--footer">대량주문 문의</a>
               <div>
                 <p>월~금요일 | 오전 9시 - 오후 6시</p>
                 <p>점심시간 | 낮 12시 - 오후 1시</p>
@@ -1623,7 +1390,7 @@
               </li>
             </ul>
           </nav>
-          <address class="my-7 text-p-sm not-italic">
+          <address class="not-italic my-7 text-p-sm">
             <div>
               <span>법인명 (상호) : 주식회사 칼리</span>
               <span aria-hidden="true">|</span>
